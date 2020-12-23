@@ -1,11 +1,11 @@
-import { getMovies } from "./db"
+import { getMovies, getMovie, getSuggestions } from "./db";
 
-// resolve a Query, program func of query
 const resolvers = {
-    Query: {
-        // _ = name of variable, not use
-        movies: (_, {rating, limit}) => getMovies(limit, rating)
-    }
+  Query: {
+    movies: (_, { rating, limit }) => getMovies(limit, rating),
+    movie: (_, { id }) => getMovie(id),
+    suggestions: (_, { id }) => getSuggestions(id)
+  }
 };
 
 export default resolvers;
