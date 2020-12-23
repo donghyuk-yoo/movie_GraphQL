@@ -2,6 +2,6 @@
 
 Movie API with GraphQL
 
-## Feature
+## Description
 
-- [x] GraphQL Server for apollo_movie project
+GraphQL Server for apollo_movie project
