@@ -1,7 +1,10 @@
+import { getMovies } from "./db"
+
 // resolve a Query, program func of query
 const resolvers = {
     Query: {
-        name: () => "ds"
+        // _ = name of variable, not use
+        movies: (_, {rating, limit}) => getMovies(limit, rating)
     }
 };
 
